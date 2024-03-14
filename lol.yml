@@ -1,0 +1,11 @@
+- name: Gather facts about the target system
+  hosts: localhost
+  gather_facts: yes
+  tasks:
+    - name: Print the operating system distribution
+      debug:
+        var: ansible_distribution
+
+    - name: Print the package manager
+      debug:
+        var: ansible_pkg_mgr
