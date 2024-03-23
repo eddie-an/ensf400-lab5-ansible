@@ -55,16 +55,16 @@
   hosts: localhost
   become: yes
   tasks:
-    # - name: Update cache
-    #   apt:
-    #     update_cache: yes
+    - name: Update cache
+      apt:
+        update_cache: yes
 
 
-    # - name: Ensure Nginx is installed and it is the latest version
-    #   apt:
-    #     name: nginx
-    #     state: latest
-    #   become: yes
+    - name: Ensure Nginx is installed and it is the latest version
+      apt:
+        name: nginx
+        state: latest
+      become: yes
     
     - name: Copy the Nginx config file to /etc/nginx/sites-available
       copy:
