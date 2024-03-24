@@ -1,0 +1,8 @@
+
+- name: Gather facts
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: Find host IP
+      debug:
+        var: ansible_default_ipv4.address
