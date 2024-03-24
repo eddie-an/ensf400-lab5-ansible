@@ -57,27 +57,20 @@
     - name: Update cache
       apt: update_cache=yes   
     - name: Install Nginx
-      # TODO
       apt:
         name: nginx
         state: latest
       become: yes
     - name: Copy the Nginx config file to /etc/nginx/sites-available
-      # TODO
       copy:
         src: ./nginx.cfg
         dest: /etc/nginx/sites-available/nginx.cfg
       become: yes
     - name: Create symlink of the config file at /etc/nginx/sites-enabled
-      # TODO
       file:
         src: /etc/nginx/sites-available/nginx.cfg
         dest: /etc/nginx/sites-enabled/default
         state: link
       become: yes
     - name: Restart nginx to apply changes
-      # TODO
-      service:
-        name: nginx
-        state: restarted
-      become: yes
+          # TODO

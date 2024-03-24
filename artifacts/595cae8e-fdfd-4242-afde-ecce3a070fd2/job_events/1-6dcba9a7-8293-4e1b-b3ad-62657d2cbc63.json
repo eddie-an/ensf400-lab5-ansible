@@ -1,1 +1,0 @@
-{"event": "verbose", "uuid": "6dcba9a7-8293-4e1b-b3ad-62657d2cbc63", "counter": 1, "stdout": "Identity added: /Users/edwardan/School/ENSF400/assignment2/ensf400-lab5-ansible/artifacts/595cae8e-fdfd-4242-afde-ecce3a070fd2/ssh_key_data (root@0.0.0.0)", "start_line": 0, "end_line": 1, "runner_ident": "595cae8e-fdfd-4242-afde-ecce3a070fd2", "created": "2024-03-24T05:28:47.856620"}
