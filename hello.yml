@@ -73,4 +73,7 @@
         state: link
       become: yes
     - name: Restart nginx to apply changes
-          # TODO
+      service:
+        name: nginx
+        state: restarted
+      become: yes
