@@ -1,18 +1,6 @@
 version: "3.7"
 
 services:
-  loadbalancer:
-    build: 
-      context: managed-host/alpine/loadbalancer
-    restart: unless-stopped
-    network_mode: "bridge"
-    environment:
-      - SSH_ENABLE_ROOT=true
-    volumes:
-      - ./secrets/id_rsa_container.pub:/root/.ssh/authorized_keys
-    ports:
-      - 80:80
-      - 2222:2222
   managedhost-app-1:
     build: 
       context: managed-host/alpine/app1

@@ -49,16 +49,13 @@
     command: forever start /node-app/app.js
     when: "forever_list.stdout.find('/node-app/app.js') == -1"
 
-
-# Fourth Play
+# Third play
 - name: Play - Install and configure Nginx as a LoadBalancer
-  hosts: localhost
+  hosts: loadbalancer
   become: yes
   tasks:
     - name: Update cache
-      apt:
-        update_cache: yes
-
+      apt: update_cache=yes
 
     - name: Ensure Nginx is installed and it is the latest version
       apt:
@@ -68,7 +65,7 @@
     
     - name: Copy the Nginx config file to /etc/nginx/sites-available
       copy:
-        src: managed-host/alpine/loadbalancer/nginx.cfg
+        src: ./nginx.cfg
         dest: /etc/nginx/sites-available/nginx.cfg
       become: yes
 
